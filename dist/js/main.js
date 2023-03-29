@@ -15,7 +15,7 @@ let $body,
 $(document).ready(function ($) {
 	$body = $('body');
 
-	if(devStatus) {
+	// if(devStatus) {
 		pageWidget(['index']);
 		pageWidget(['about']);
 		pageWidget(['contacts']);
@@ -24,14 +24,13 @@ $(document).ready(function ($) {
 		pageWidget(['work']);
 		pageWidget(['404']);
 		getAllClasses('html', '.elements_list');
-	}
+	// }
 });
 
 $(window).on('load', function () {
 	updateSizes();
 	loadFunc();
 	modal();
-	headerHiddens();
 	checkSubmenu();
 	showMoreText();
 });
@@ -42,7 +41,7 @@ $(window).on('resize', function () {
 
 $(window).on('scroll', function () {
 	scrollFunc();
-	// stateHeader();
+	headerHiddens();
 });
 
 function loadFunc() {
@@ -51,7 +50,6 @@ function loadFunc() {
 
 function resizeFunc() {
 	updateSizes();
-
 	calcViewportHeight();
 }
 
