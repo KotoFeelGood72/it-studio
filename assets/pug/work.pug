@@ -1,0 +1,34 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Portfolio'}
+block content_block
+	+bread(['Главная'], 'Портфолио')
+	section.work 
+		.section_in 
+			.work_head 
+				h1.mb6 Портфолио
+				ul.category-list
+					-for(i = 0; i < 6; i++)
+						li 
+							a(href="#") Название категории
+			.work-grid.pb8 
+				ul.work_grid--list.p8.grid-3 
+					-for(i = 0; i < 4; i++)
+						li.work_item 
+							a(href="#" class="trigger" data-target="work")
+								.work_slide_img 
+									img(src="i/work.jpg", alt="")
+								.work_slide_content 
+									span Название категории
+									h3.fz20 Создание ИТ инфраструктуры небольшого офиса с нуля
+									p.break-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...
+								+btn({
+									name: 'Подробнее',
+									type: 'button',
+									color: 'light'
+								})
+				+pagination({
+					pages:5,
+					arrows:true
+				})

@@ -1,0 +1,33 @@
+header.header 
+	.section_in 
+		.header_main
+			.header_col--left
+				.header_logo
+					a(href="#")
+						img(src="i/global/default-logo.svg", alt="" class="default-logo")
+						img(src="i/global/txt-logo.svg", class="txt-logo" alt="")
+				nav.header_nav
+					.header_menu--bg
+					ul.header_nav_list 
+						each item, i in ['Главная', 'Услуги', 'Портфолио', 'О компании', 'Контакты']
+							if i === 1
+								li 
+									a(href="#")=item 
+									ul.sub-menu 
+										each sub in ['IT-аутсорсинг', 'IT-услуги', 'IT-безопасность', 'Серверы']
+											li 
+												a(href="#" class="beaty-link")=sub
+							else 
+								li 
+									a(href="#")=item
+			.header_info 
+				a(href="#" class="header_phone" ) +7 000 000 00 00
+				ul.social-list
+					each item in ['wa', 'tg']
+						li.social_item 
+							a(href="#")
+								img(src=`i/global/${item}.png`, alt="")
+			.button-burger(data-target="burger" class="trigger")
+				span 
+				span 
+				span 

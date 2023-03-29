@@ -1,0 +1,76 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.hero 
+		.section_in 
+			.hero_main
+				.hero_content 
+					.hero_content_top 
+						h1 IT обслуживание организаций
+						p В Москве и Московской области
+						+btn({
+							type: 'button',
+							name: 'Оставить заявку',
+							target: 'form',
+							color: 'orange'
+						})
+					ul.hero_service--list.grid-2
+						-for(i = 0; i < 2; i++)
+							- let title = ['Результативность', 'Надежность']
+							- let txt = ['Работаем над недопущением возможных проблем, а не устранению их по факту.', 'Бесперебойная работа компьютеров, сети и программного обеспечения – 365 дней в году.']
+								li.hero_service--item 
+									p(class="fz23")=title[i] 
+									span=txt[i]
+				.hero_form_w 
+					h3.fz30 Получите консультацию
+					p Оставьте заявку, и мы свяжемся с вами!
+					.global_form
+						-for(i =0; i < 2; i++)
+							- let place = ['Ваше имя', 'Ваше телефон']
+							- let type = ['text', 'tel']
+								+input({
+									place: place[i],
+									type: type[i]
+								})
+						+btn({
+							type: 'submit',
+							color: 'orange'
+						})
+						.form_notice!='Отправляя форму, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности.</a>'
+	section.default.p8 
+		.section_in 
+			+txt({
+				class: 'flex-2',
+				title: `<h2>Чем мы занимаемся</h2>`,
+				txt: `
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </li>
+				</ul>
+				`,
+			})
+	.home-service 
+		.section_in
+			include components/mini-service
+	include components/app
+	section.home-service.p8
+		.section_in
+			h4 Наши услуги
+			ul.home-service_list.grid-3
+				-for(i = 0; i < 4; i++)
+					- let title = ['IT-аутсорсинг', 'IT-услуги', 'IT-безопасность', 'Серверы']
+						li.home-service_item
+							+serviceCard({
+								title: title[i],
+								icon: `service-${i}`
+							})
+	include components/work-slider
+
+
+
+		
+

@@ -1,0 +1,7 @@
+.work_grid--list {
+	grid-gap: 3rem;
+
+	@include bp($point_2) {
+		grid-gap: 2rem;
+	}
+}

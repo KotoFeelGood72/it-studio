@@ -1,0 +1,271 @@
+.grid-2 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	}
+}
+
+.grid-4 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	}
+	.global_input  {
+		margin-bottom: 0;
+	}
+}
+
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	}
+	.global_input  {
+		margin-bottom: 0;
+	}
+}
+
+.grid-2, .grid-3, .grid-4 {
+	@include bp($point_5) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	}
+}
+
+
+
+
+
+
+
+// Font size variable
+.fz23 {
+	font-size: 2.3rem;
+	font-family: $font_3;
+	font-weight: 500;
+	line-height: 2.7rem;
+	@include bp($point_2) {
+		font-size: 2.1rem;
+		line-height: 2.4rem;
+	}
+}
+
+.fz20 {
+	font-size: 2rem;
+	font-family: $font_3;
+	font-weight: 500;
+	line-height: 2.4rem;
+	@include bp($point_2) {
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+	}
+}
+
+.fz30 {
+	font-size: 3rem;
+	font-family: $font_3;
+	font-weight: 500;
+	line-height: 3.6rem;
+	@include bp($point_2) {
+		font-size: 2.3rem;
+		line-height: 2.7rem;
+	}
+}
+
+.break-text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-height: 2.1rem;
+	max-height: 6.6rem;
+	color: $dark;
+	opacity: .8;
+	font-size: 1.8rem;
+	@include bp($point_2) {
+		font-size: 1.6rem;
+	}
+}
+
+.break-text4 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	line-height: 2.1rem;
+	max-height: 8.8rem;
+	color: $dark;
+	opacity: .8;
+	font-size: 1.8rem;
+	@include bp($point_2) {
+		font-size: 1.6rem;
+	}
+}
+
+
+
+
+
+// Variable input
+
+.global_input {
+	margin-bottom: 1.5rem;
+	width: 100%;
+	input {
+		@include app;
+		padding: 2rem 2.5rem;
+		border-radius: $gl_radius;
+		border: .1rem solid rgba(35, 35, 35, 0.2);
+		width: 100%;
+		background-color: $white;
+		min-height: 6.3rem;
+	}
+}
+
+
+// Variable padding and bottom
+.mb13 {
+	margin-bottom: 13rem;
+	@include bp($point_2) {
+		margin-bottom: 8rem;
+	}
+}
+.pb8 {
+	padding-bottom: 8rem;
+	@include bp($point_2) {
+		padding-bottom: 4rem;
+	}
+}
+.pt8 {
+	padding-top: 8rem;
+	@include bp($point_2) {
+		padding-top: 4rem;
+	}
+}
+.mb8 {
+	margin-bottom: 8rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
+}
+.mt8 {
+	margin-top: 8rem;
+	@include bp($point_2) {
+		margin-top: 4rem;
+	}
+}
+
+.m8 {
+	margin: 8rem 0;
+	@include bp($point_2) {
+		margin: 4rem 0;
+	}
+}
+
+.mb8 {
+	margin-bottom: 8rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
+}
+.p8 {
+	padding: 8rem 0;
+	@include bp($point_2)  {
+		padding: 4rem 0;
+	}
+}
+
+.mt15 {
+	margin-top: 1.5rem;
+}
+
+.mb16 {
+	margin-bottom: 1.6rem;
+}
+.mb15 {
+	margin-bottom: 1.5rem;
+}
+
+.m15 {
+	margin: 1.5rem 0;
+}
+
+.mb6 {
+	margin-bottom: 6rem;
+	@include bp($point_2) {
+		margin-bottom: 3rem;
+	}
+}
+
+.pMix {
+	padding: 16rem 0 8rem 0;
+	@include bp($point_2) {
+		padding: 8rem 0 4rem 0;
+	}
+	// @include bp($point_5) {
+	// 	padding: 8rem 0 4rem 0;
+	// }
+}
+
+.pMix6 {
+	padding: 8rem 0 6rem 0;
+	@include bp($point_2) {
+		padding: 4rem 0 3rem 0;
+	}
+}
+
+.mMix4 {
+	padding: 6rem 0 4rem 0;
+	@include bp($point_2) {
+		padding: 4rem 0 3rem 0
+	}
+}
+
+
+
+.flex-space {
+	@include flex-space;
+}
+
+.beaty-link {
+	position: relative;
+	transition: all .3s ease;
+	&:after, &:before {
+		position: absolute;
+		bottom: -.4rem;
+		content: '';
+		border-bottom: .2rem solid $orange;
+		transition: all .3s ease;
+		width: 0;
+	}
+	&:before {
+		left: 0;
+	}
+
+	&:after {
+		right: 0;
+	}
+	&:hover {
+		color: $orange;
+		&:after, &:before {
+			width: 50%;
+		}
+	}
+}
+
+.showMoreTxt.visible  {
+	max-height: 100%;
+	-webkit-line-clamp: 10000;
+}
+
+.onVisible {
+	svg {
+		transform: rotate(180deg);
+	}
+}

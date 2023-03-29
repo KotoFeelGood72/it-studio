@@ -1,0 +1,24 @@
+section.home-work.p8
+	.section_in 
+		+section_head({
+			title: 'Наше портфолио',
+			class: 'work'
+		})
+		.work-slider.swiper 
+			.swiper-wrapper
+				-for(i = 0; i < 12; i++) 
+					.swiper-slide 
+						.work_slide.work_item 
+							a(href="#" class="trigger" data-target="work")
+								.work_slide_img 
+									img(src="i/work.jpg", alt="")
+								.work_slide_content 
+									span Название таба
+									h3.fz20 Создание ИТ инфраструктуры небольшого офиса с нуля
+									p.break-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut...
+								+btn({
+									name: 'Подробнее',
+									type: 'button',
+									color: 'light'
+								})
+			.global_pagination.work_pagination

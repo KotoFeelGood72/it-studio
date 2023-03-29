@@ -1,0 +1,47 @@
+// variables,mixins,extends
+@import "helpers/helpers_all";
+@import "family";
+
+// base
+@import "reset";
+@import "fonts";
+@import "base";
+@import "main";
+
+// templates
+@import "templates/header";
+@import "templates/footer";
+@import "templates/popup";
+@import "templates/alert";
+@import "templates/btn";
+
+// Components
+
+@import "components/social";
+@import "components/txt";
+@import "components/mini-service";
+@import "components/app";
+@import "components/card-service";
+@import "components/section-head";
+@import "components/work";
+@import "components/bread";
+@import "components/contacts";
+@import "components/category-list";
+@import "components/pagination";
+@import "components/table";
+
+// icons
+@import "icons";
+@import "sprite";
+
+// Page
+
+@import "page/home";
+@import "page/policy";
+@import "page/about";
+@import "page/work";
+@import "page/error";
+@import "page/single-service";
+
+// plugins
+@import "plugins/swiper";

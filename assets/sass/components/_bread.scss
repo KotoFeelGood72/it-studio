@@ -1,0 +1,33 @@
+.breadcrumb__list {
+	@include flex-start;
+	flex-wrap: wrap;
+	padding: 1.5rem 0 6rem 0;
+	@include bp($point_2) {
+		padding: 1rem 0 4rem 0;
+	}
+	li {
+		font-size: 1.6rem;
+		@include bp($point_2) {
+			font-size: 1.4rem;
+		}
+		a {
+			opacity: .5;
+			transition: all .3s ease;
+			font-size: 1.6rem;
+			@include bp($point_2) {
+				font-size: 1.4rem;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&:not(:last-child) {
+			a {
+				&:after {
+					content: '/';
+					margin: 0 .7rem;
+				}
+			}
+		}
+	}
+}

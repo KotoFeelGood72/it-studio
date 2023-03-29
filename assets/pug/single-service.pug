@@ -1,0 +1,288 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Single service'}
+block content_block
+	-
+		let bodyTable = [
+			{
+				one: "Рекомендуется для компаний с количеством оборудования (компьютеры + серверы):",
+				two: "3-5 ед",
+				free: "5-10 ед.",
+				four: "11-45 ед.",
+				five: "45 ед. и более45 ед. и более"
+			},
+			{
+				one: "Планово-профилактические мероприятия",
+				two: "1 раз в месяц (удаленно)",
+				free: "1 раз в месяц",
+				four: "1 раз в месяц",
+				five: "2 раза в месяц и более"
+			},
+			{
+				one: "Кол-во бесплатных экстренных выездов",
+				two: "выезд за доп. оплату",
+				free: "3 раза в месяц",
+				four: "неограниченно",
+				five: "неограниченно"
+			},
+			{
+				one: "Рекомендуется для компаний с количеством оборудования (компьютеры + серверы):",
+				two: "3-5 ед",
+				free: "5-10 ед.",
+				four: "11-45 ед.",
+				five: "45 ед. и более45 ед. и более"
+			},
+			{
+				one: "Удаленное решение проблем. Консультации пользователей",
+				two: "неограниченно",
+				free: "неограниченно",
+				four: "неограниченно",
+				five: "неограниченно"
+			},
+			{
+				one: "Гарантированное врем прибытия инженера по аварийным случаям (с учетом пробок)",
+				two: "до 24-х часов",
+				free: "до 4-х часов",
+				four: "до 3-х часов",
+				five: "до 2-х часов"
+			},
+			{
+				one: "Гарантированное время реакции на заявку",
+				two: "до 1 часа",
+				free: "до 1 часа",
+				four: "до 30 мин",
+				five: "до 15 мин"
+			},
+			{
+				one: "Подключение к системе учета заявок — Нelpdesk",
+				two: "yes",
+				free: "yes",
+				four: "yes",
+				five: "yes"
+			},
+			{
+				one: "ИТ аудит на начальном этапе",
+				two: "no",
+				free: "yes",
+				four: "yes",
+				five: "yes"
+			},
+			{
+				one: "Обслуживание оргтехники (подключение, настройка, устранение ошибок)",
+				two: "yes",
+				free: "yes",
+				four: "yes",
+				five: "yes"
+			},
+			{
+				one: "Подбор и закупка оборудования",
+				two: "no",
+				free: "yes",
+				four: "yes",
+				five: "yes"
+			},
+			{
+				one: "Резервное копирование ключевых данных и контроль бэкапов",
+				two: "no",
+				free: "no",
+				four: "yes",
+				five: "yes"
+			},
+			{
+				one: "Круглосуточный мониторинг основных систем",
+				two: "no",
+				free: "no",
+				four: "yes",
+				five: "yes"
+			},
+			{
+				one: "Закрепленный системный администратор",
+				two: "no",
+				free: "no",
+				four: "yes",
+				five: "yes"
+			},
+			{
+				one: "Отчет по итогам работы за месяц",
+				two: "no",
+				free: "no",
+				four: "yes",
+				five: "yes"
+			},
+			{
+				one: "Базовая поддержка 1С",
+				two: "no",
+				free: "no",
+				four: "yes",
+				five: "yes"
+			},
+			{
+				one: "Персональный менеджер (ИТ директор)",
+				two: "no",
+				free: "no",
+				four: "no",
+				five: "yes"
+			},
+			{
+				one: "Поддержка, настройка телефонии",
+				two: "no",
+				free: "no",
+				four: "no",
+				five: "yes"
+			}
+		]
+	-
+		let bodyPrice = [
+			{
+				one: "Компьютер",
+				two: "от 490",
+				free: "от 750",
+				four: "от 850",
+				five: "от 1000"
+			},
+			{
+				one: "Сервер",
+				two: "1600",
+				free: "1900",
+				four: "2400",
+				five: "2400"
+			},
+			{
+				one: "Активное сетевое оборудование",
+				two: "500",
+				free: "900",
+				four: "900",
+				five: "900"
+			},
+			{
+				one: "АТС",
+				two: "от 3000",
+				free: "от 3000",
+				four: "от 3000",
+				five: "от 3000"
+			},
+			{
+				one: "Файловое хранилище (NAS)",
+				two: "900",
+				free: "1200",
+				four: "1200",
+				five: "1200"
+			}
+		]
+	+bread(['Главная'], 'IT-аутсорсинг')
+	section.single-service.pb8
+		.section_in 
+			.block-img.mb8 
+				.block_img--content 
+					h1 IT-аутсорсинг
+					p В Москве и Московской области
+					+btn({
+							type: 'button',
+							name: 'Оставить заявку',
+							target: 'form',
+							color: 'orange'
+						})
+				.block_img--picture 
+					img(src="i/single/single.jpg", alt="")
+			.block_single--txt
+				+txt({
+					class: 'flex-1 pMix6',
+					title: `<h2 class="mb6">Информация об услуге</h2>`,
+					txt: `
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<ul>
+						<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </li>
+					</ul>
+					`,
+				})
+			.block_single--service 
+				include components/mini-service
+			.block_single--price.pt8
+				.block_single--head.mb6.flex-space
+					h3 Стоимость услуг
+					+btn({
+							type: 'button',
+							name: 'Оставить заявку',
+							target: 'form',
+							color: 'orange'
+						})
+				.table_w
+					table.col-5
+						thead
+							tr
+								each item in ['Опции', 'Тариф “Удаленная </br>поддержка”', 'Тариф </br>“Базовый”', 'Тариф </br>“Стандартный”', 'Тариф </br>“Расширенный”']
+									th!=item
+						tbody
+							each item in bodyTable
+								tr 
+									th!=item.one
+									th
+										if item.two == 'yes'
+											+icon('yes')
+										else if item.two == 'no'
+											+icon('no')
+										else 
+											span=item.two
+									th
+										if item.free == 'yes'
+											+icon('yes')
+										else if item.free == 'no'
+											+icon('no')
+										else 
+											span=item.free
+									th
+										if item.four == 'yes'
+											+icon('yes')
+										else if item.four == 'no'
+											+icon('no')
+										else 
+											span=item.four
+									th
+										if item.five == 'yes'
+											+icon('yes')
+										else if item.five == 'no'
+											+icon('no')
+										else 
+											span=item.five
+					table.col-5
+						thead
+							tr
+								each item in ['Цены для Московского региона (будние дни с 9 до 18 часов)', 'Цена </br>(рублей за ед.)', 'Цена </br>(рублей за ед.)', 'Цена </br>(рублей за ед.)', 'Цена </br>(рублей за ед.)']
+									th!=item
+						tbody 
+							each item in bodyPrice 
+								tr 
+									th!=item.one
+									th!=item.two
+									th!=item.free
+									th!=item.four
+									th!=item.five
+				p.mMix4 Не нашли подходящего среди предложенных тарифов? Позвоните по телефону, указанному на сайте — разработаем план на индивидуальных условиях.
+				+btn({
+						type: 'button',
+						name: 'Оставить заявку',
+						target: 'form',
+						color: 'orange'
+					})
+			.block_single--work.p8 
+				include components/work-slider
+			.block_singleService--slider
+				+section_head({
+					title: 'Другие услуги',
+					class: 'services'
+				})
+				.services-slider.swiper 
+					.swiper-wrapper 
+						-for(i = 0; i < 4; i++)
+							.swiper-slide 
+								- let title = ['IT-аутсорсинг', 'IT-услуги', 'IT-безопасность', 'Серверы']
+									.service_card--slide.home-service_item
+										+serviceCard({
+											title: title[i],
+											icon: `service-${i}`
+										})
+					.global_pagination.service_pagination
+					

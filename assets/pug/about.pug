@@ -1,0 +1,41 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Portfolio'}
+block content_block
+	+bread(['Главная'], 'О компании')
+	section.about 
+		.section_in 
+			.about_head 
+				h1.mb6 О компании
+				p.mb6 (Место для слогана и самой важной информации) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				ul.mini_service--list.grid-4
+					-for(i = 0; i < 4; i++)
+						- let title = ['8+', '100+', '8+', '100+']
+						- let txt = ['Лет работаем на рынке', 'Клиентов на обслуживании', 'Лет работаем на рынке', 'Клиентов на обслуживании']
+							li.mini-service_item 
+								p=title[i]
+								span=txt[i]
+				+txt({
+					class: 'flex-1 custom-descript pMix',
+					title: `<h2>Немного о нас</h2>`,
+					txt: `
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					`,
+				})
+			.whats_work.p8
+				h3.mb6 Чем мы занимаемся
+				ul.whats_work--list.grid-2 
+					-for(i = 0; i < 4; i++)
+						li.whats_work--item.showMoreBlock
+							.whats_item--img 
+								img(src="i/whats.jpg", alt="")
+							.whats_item--content 
+								h3.fz23 Заголовок
+								p.m15.break-text4.showMoreTxt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+								button(class="local-more showMoreBtn")
+									p Развернуть
+									+icon('down')
+			include components/app
+	include components/work-slider

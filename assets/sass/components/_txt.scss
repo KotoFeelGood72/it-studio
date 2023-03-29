@@ -1,0 +1,68 @@
+.txt-block {
+	font-size: 2rem;
+	@include bp($point_2) {
+		font-size: 1.6rem;
+	}
+	&.flex-2 {
+		@include flex-space;
+		align-items: flex-start;
+		@include bp($point_2) {
+			flex-direction: column;
+		}
+		.txt_boby {
+			max-width: 75.7rem;
+		}
+		h2, h3, h4, h5, h6 {
+			margin-right: 6rem;
+			@include bp($point_2) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	p, b, i, ol, span, div {
+		&:not(:last-child) {
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+	ul {
+		padding: 4rem 0;
+		@include bp($point_5) {
+			padding: 2rem 0;
+		}
+		&:not(:last-child) {
+			padding: 4rem 0 0 0;
+			@include bp($point_5) {
+				padding: 2rem 0 0 0;
+			}
+		}
+	}
+	li {
+		position: relative;
+		padding-left: 4.7rem;
+		@include bp($point_5) {
+			padding-left: 3rem;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 2.7rem;
+			height: 2.7rem;
+			background: url('../../i/global/check.svg') center/cover no-repeat;
+			border-radius: 0.3rem;
+
+			@include bp($point_5) {
+				width: 2rem;
+				height: 2rem;
+				top: .3rem;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+}

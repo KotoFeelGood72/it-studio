@@ -1,0 +1,20 @@
+section.app.m8
+	.section_in 
+		.app_main 
+			.app_head 
+				h4.fz30 Получите бесплатную консультацию
+				p Оставьте заявку, и мы свяжемся с вами!
+			.app_form
+				.app_form_head.grid-3 
+					-for(i =0; i < 2; i++)
+						- let place = ['Ваше имя', 'Ваше телефон']
+						- let type = ['text', 'tel']
+							+input({
+								place: place[i],
+								type: type[i]
+							})
+					+btn({
+						type: 'submit',
+						color: 'orange'
+					})
+				.form_notice!='Отправляя форму, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности.</a>'

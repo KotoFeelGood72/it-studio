@@ -1,0 +1,261 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: $header;
+	width: 100%;
+	will-change: transform;
+	@include z-index(header);
+	padding: 2.5rem 0;
+	@include flex-center;
+	transition: transform .3s ease;
+	@include bp($point_2) {
+		height: $header_mob;
+		padding: 1rem 0;
+	}
+	&.header_hidden {
+		transform: translateY(-100%);
+	}
+
+	@include bp($point_5) {
+		background-color: #ffffff8c;
+		backdrop-filter: blur(3rem);
+		height: 8rem;
+		box-shadow: 0 .9rem 3rem rgba(26, 7, 62, 0.1);
+	}
+}
+
+.header {
+}
+.section_in {
+}
+.header_main {
+	border-radius: $gl-radius;
+	padding: 0 3rem;
+	position: relative;
+
+	@include bp($point_2) {
+		background: $white;
+		padding: 1rem 2rem;
+		box-shadow: 0 .9rem 3rem rgba(26, 7, 62, 0.1);
+	}
+
+	@include bp($point_5) {
+		padding: 0;
+		background-color: $trans;
+		box-shadow: none;
+	}
+}
+
+.header_col--left, .header_main, .header_nav_list {
+	@include flex-start;
+}
+
+.header_main {
+	justify-content: space-between;
+	position: relative;
+}
+.header_col--left {
+	flex-grow: 1;
+}
+.header_logo {
+	margin-right: 6rem;
+	max-width: 6.7rem;
+	@include bp($point_5) {
+		max-width: 18rem;
+		margin-right: 2rem;
+		width: 100%
+	}
+	a {
+		@include bp($point_5) {
+			@include flex-start;
+			width: 100%;
+		}
+	}
+
+	.default-logo {
+		max-width: 3.6rem;
+		margin: 0 auto;
+		margin-bottom: 0.7rem;
+		@include bp($point_5) {
+			max-width: 5rem;
+			margin: 0 1rem 0 0;
+		}
+	}
+
+	.txt-logo {
+		// @include bp($point_5) {
+		// 	display: none;
+		// }
+	}
+}
+.header_nav {
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.header_nav_list {
+	margin-right: 6rem;
+	&>li {
+		&>a {
+			font-family: $font_2;
+			display: block;
+			padding: 3rem 0;
+			transition: all .3s ease;
+			&:hover, .current-page-item {
+				color: $orange;
+			}
+		}
+		&:not(:last-child) {
+			margin-right: 5rem;
+		}
+	}
+}
+.sub-menu {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	padding: 1rem 1rem 1rem 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease;
+
+	li {
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+		a {
+			font-family: $font_2;
+			font-size: 1.6rem;
+		}
+	}
+}
+.header_info {
+	@include flex-start;
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.header_phone {
+	color: $orange;
+	font-size: 2rem;
+	font-family: $font_3;
+	margin-right: 5rem;
+}
+
+
+// Header submenu
+
+
+.header_nav {
+	ul {
+		li {
+			
+			&:hover {
+				ul.sub-menu {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
+// end
+.header_menu--bg.active-menu {
+	&:hover {
+		& + .header_nav_list ul.sub-menu {
+			opacity: 1;
+			visibility: visible;
+		}
+		& + .header_nav_list li.has-children {
+				&>a {
+					&:after {
+						transform: translateY(-50%) rotate(180deg);
+					}
+					color: $orange;
+				}
+			}
+	}
+}
+.has-children {
+	&:hover {
+		&>a {
+			&:after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+			color: $orange;
+		}
+	}
+	&>a {
+		position: relative;
+		display: block;
+		padding: 3rem 2.4rem!important;
+		margin-left: -2.4rem;
+		&:after {
+			width: 1.4rem;
+			height: .8rem;
+			background: url('../../i/global/arrow-menu.svg') center/cover no-repeat;
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			transition: all .3s ease;
+		}
+	}
+}
+
+.header_menu--bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $white;
+	@include z-index(el);
+	min-height: 100%;
+	box-shadow: 0 .9rem 3rem rgba(26, 7, 62, 0.1);
+	border-radius: $gl_radius;
+	transition: all .3s ease;
+
+	&.active-menu {
+		min-height: 26.8rem;
+	}
+}
+
+.button-burger {
+	display: none;
+	position: relative;
+	width: 5rem;
+	height: 3.5rem;
+	@include bp($point_2) {
+		display: block;
+	}
+
+	@include bp($point_5) {
+		width: 4rem;
+		height: 3rem;
+	}
+	span {
+		width: 100%;
+		border-bottom: .5rem solid $orange;
+		display: block;
+
+		position: absolute;
+
+		&:nth-child(1) {
+			top: 0;
+			right: 0;
+		}
+		&:nth-child(2) {
+			top: 50%;
+			transform: translateY(-50%);
+			max-width: 70%;
+		}
+		&:nth-child(3) {
+			bottom: 0;
+			left: 0;
+			max-width: 90%;
+		}
+	}
+}

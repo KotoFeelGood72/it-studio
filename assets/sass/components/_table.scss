@@ -1,0 +1,108 @@
+
+.table_w {
+	table {
+		&:nth-child(1) {
+			-moz-border-radius: 1rem;
+			-webkit-border-radius: 1rem;
+			border-radius: 1rem;
+			@include bp($point_2) {
+				-moz-border-radius: 0;
+				-webkit-border-radius: 0;
+				border-radius: 0;
+			}
+		}
+	}
+	@include bp($point_2) {
+		overflow-x: scroll!important;
+		max-width: 100%;
+	}
+}
+table {
+width: 100%;
+border-spacing: .1rem;
+overflow: hidden;
+
+&.col-5 {
+	th {
+		&:nth-child(5n+1) {
+			max-width: 43.9rem;
+			@include bp($point_5) {
+				max-width: 100%;
+			}
+		}
+	}
+	}
+}
+
+thead {
+	color: $white;
+	width: 100%;
+	tr {
+		background-color: $blue;
+	}
+	th {
+		padding: 3.6rem 1.7rem;
+		border: .1rem solid #FFFFFF33;
+		border-top: 0;
+		border-bottom: 0;
+		font-size: 1.8rem;
+		font-family: $font_2;
+		font-weight: 400;
+		@include bp($point_2) {
+			font-size: 1.6rem;
+			padding: 1.5rem 2rem;
+		}
+
+		@include bp($point_5) {
+			font-size: 1.4rem;
+			padding: 1rem;
+		}
+	}
+}
+tbody {
+	width: 100%;
+	background-color: $white;
+	tr {
+		&:nth-child(2n + 1) {
+			background-color: #2A007C0D;
+		}
+	}
+	th {
+		border: .1rem solid #2323231A;
+		font-size: 1.8rem;
+		font-family: $font_1;
+		font-weight: 300;
+		padding: 3rem 2rem;
+		width: 22.1rem;
+		@include bp($point_2) {
+			font-size: 1.4rem;
+			padding: 1.5rem 1rem;
+			width: 15rem;
+		}
+
+		@include bp($point_5) {
+			min-width: 25rem;
+			padding: 1rem;
+		}
+		&:nth-of-type(5n+1) {
+			width: 43.9rem;
+			@include bp($point_5) {
+				min-width: 25rem;
+			}
+		}
+	}
+}
+
+.icon-yes {
+	color: #00AB44;
+	@include bp($point_2) {
+		font-size: 1.5rem!important;
+	}
+}
+
+.icon-no {
+	color: #E10000;
+	@include bp($point_2) {
+		font-size: 1.5rem!important;
+	}
+}

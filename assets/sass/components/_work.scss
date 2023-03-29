@@ -1,0 +1,88 @@
+.work_item {
+	border: .1rem solid rgba(35, 35, 35, 0.2);
+	border-radius: $gl_radius;
+	position: relative;
+	transition: all .3s ease;
+	&:before {
+		border-radius: $gl_radius;
+		transition: all .3s ease;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+		background-color: $white;
+		box-shadow: 0 .9rem 3rem rgba(26, 7, 62, 0.15);
+		@include z-index(el);
+		opacity: 0;
+		visibility: hidden;
+	}
+	&:hover {
+		border-color: $trans;
+		@include bp($point_2) {
+			border: .1rem solid rgba(35, 35, 35, 0.2);
+		}
+		.light-btn {
+			background-color: $orange;
+		}
+		&:before {
+			opacity: 1;
+			visibility: visible;
+			@include bp($point_2) {
+				display: none;
+			}
+		}
+	}
+	a {
+		width: 100%;
+	}
+
+	.btn {
+		margin: 2rem;
+		@include bp($point_5) {
+			display: none;
+		}
+		button {
+			width: 100%;
+		}
+	}
+} 
+.work_slide_img {
+	height: 22rem;
+	overflow: hidden;
+	border-top-right-radius: $gl_radius;
+	border-top-left-radius: $gl_radius;
+	img {
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.work_slide_content {
+	padding: 2rem 2rem 3rem 2rem;
+
+	@include bp($point_5) {
+		padding: 1rem 1rem 2rem 1rem;
+	}
+
+	span {
+		color: $orange;
+		font-size: 1.6rem;
+		font-family: $font_2;
+	}
+
+	.fz20 {
+		padding: 1.5rem 0;
+	}
+}
+
+.work-slider {
+	padding: 3rem!important;
+	margin: -3rem!important;
+
+	@include bp($point_5) {
+		padding: 0 0 4rem 0!important;
+		margin: 0!important;
+	}
+}

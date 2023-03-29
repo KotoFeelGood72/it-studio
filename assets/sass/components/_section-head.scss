@@ -1,0 +1,37 @@
+.section_head {
+	@include flex-space;
+	margin-bottom: 6rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
+}
+
+.section_nav  {
+	@include flex-end;
+
+	@include bp($point_5) {
+		display: none
+	}
+	&>div {
+		@include flex-center;
+		width: 4.7rem;
+		height: 4.7rem;
+		border-radius: 0.5rem;
+		background-color: $orange;
+		color: $white;
+		cursor: pointer;
+		border: .1rem solid $trans;
+		&.swiper-button-disabled {
+			background-color: $trans;
+			color: $orange;
+			pointer-events: none;
+			border: .1rem solid rgba(35, 35, 35, 0.2);
+		}
+		&:nth-child(1) {
+			margin-right: 2rem;
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

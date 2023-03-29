@@ -1,0 +1,55 @@
+.wave {
+  background: rgba(255, 255, 255, .4);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: wave .5s linear;
+  pointer-events: none;
+  position: absolute;
+}
+
+@keyframes wave {
+  100% {
+   transform: scale(2);
+   opacity: 0;
+  }
+}
+
+.btn {
+	@include bp($point_2) {
+		display: inline-flex;
+	}
+	position: relative;
+	overflow: hidden;
+	a, button, input[type="submit"] {
+		@include app;
+		font-family: $font_4;
+		font-weight: 600;
+		color: $white;
+		border-radius: $gl_radius;
+		padding: 2rem 5rem;
+		@include flex-center;
+		cursor: pointer;
+		min-height: 6.3rem;
+		transition: all .3s ease;
+		
+		
+		&.orange-btn {
+			background-color: $orange;
+			&:hover {
+				background-color: $dark-orange;
+			}
+		}
+		&.light-btn {
+			background-color: $light;
+			@include bp($point_2) {
+				background-color: $orange;
+			}
+			&:hover {
+				background-color: $orange;
+			}
+		}
+	}
+
+
+
+}

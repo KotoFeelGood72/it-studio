@@ -1,0 +1,32 @@
+footer.footer.mt8
+	.section_in 
+		.footer_main
+			.footer_head.p8
+				.footer_form_head 
+					h4.fz30 Получите бесплатную консультацию
+					p Оставьте заявку, и мы свяжемся с вами!
+				.footer_form_w
+					.footer_form.grid-4
+						-for(i =0; i < 2; i++)
+							- let place = ['Ваше имя', 'Ваше телефон']
+							- let type = ['text', 'tel']
+								+input({
+									place: place[i],
+									type: type[i]
+								})
+						+btn({
+							type: 'submit',
+							color: 'orange',
+						})
+						.form_notice!='Отправляя форму, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности.</a>'
+			+contacts({
+				class: 'white'
+			})
+			.footer_bottom 
+				.footer_col--left 
+					span © 2022 Все права защищены
+					a(href="#") Политика конфиденциальности
+				.footer_col--right 
+					a(href="#")
+						img(src="i/global/brand.svg", alt="") 
+			

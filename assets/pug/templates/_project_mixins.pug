@@ -1,0 +1,86 @@
+// Btn
+
+mixin btn(data)
+	.btn(class=data.class)
+		if data.type === 'link'
+			a(href="#" class=`${data.color}-btn`)=data.name
+		else if data.type === 'button'
+			button(type=data.type data-target=data.target class="trigger" class=`${data.color}-btn`)=data.name
+		else if data.type === 'submit'
+			input(type="submit" value=data.name class=`${data.color}-btn`)
+		
+
+// End btn
+
+
+// Input 
+
+mixin input(data)
+	.global_input(class=data.class ? data.class : data.class="form_input")
+			input(type=data.type ? data.type : data.type="text" placeholder=data.place ? data.place : data.place="Ваше имя")
+// end input
+
+// txt block
+
+mixin txt(data)
+	.txt-block(class=data.class) 
+		.txt_head!=data.title
+		.txt_boby!=data.txt
+
+// end txt block
+
+// service card
+
+mixin serviceCard(data)
+	.serviceCard 
+		a(href="#")
+			.serviceCard_icon 
+				+icon(data.icon)
+			.serviceCard_content 
+				h3.fz23=data.title 
+				p.break-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			.serviceCard_link 
+				p Подробнее
+				.serviceCard_link_icon 
+					+icon('arrow-right')
+
+
+// end service card
+
+// mixin section_head 
+
+mixin section_head(data)
+	.section_head 
+		h4.section_title!=data.title 
+		.section_nav(class=`${data.class}_nav`)
+			.section_nav_btn(class=`${data.class}_btn_prev`)
+				+icon('arrow-right')
+			.section_nav_btn(class=`${data.class}_btn_next`)
+				+icon('arrow-right')
+
+
+// end section_head
+
+// Work slider
+
+
+
+// end work slider
+
+// contacts info
+mixin contacts(data)
+	.contacts_body.mb8(class=data.class) 
+		ul.contacts_info_list.grid-3
+			-for(i = 0; i < 3; i++)
+				- let label = ['Телефон', 'Почта', 'Адрес']
+				- let val = ['+7 000 000 00 00', 'mail@mail.ru', 'Краснодар, ул.Солнечная 25 д.1']
+					li 
+						span=label[i]
+						a(href="#" class="fz20")=val[i]
+		.contacts_social_w
+			span Мессенджеры
+			ul.social-list 
+				each item in ['wa', 'tg']
+					li.social_item 
+						a(href="#")
+							img(src=`i/global/${item}.png`, alt="")

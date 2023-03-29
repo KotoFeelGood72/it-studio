@@ -1,0 +1,33 @@
+.mini-service_main {
+	h2, h3, h4, h5, h6 {
+		margin-bottom: 8rem;
+		@include bp($point_2) {
+			margin-bottom: 6rem;
+		}
+		@include bp($point_5) {
+			margin-bottom: 4rem;
+		}
+	}
+}
+
+.mini_service--list {
+	grid-gap: 3rem;
+	@include bp($point_5) {
+		grid-gap: 2rem;
+	}
+	li {
+		background-color: $light;
+		padding: 3rem;
+		text-align: center;
+		border-radius: $gl_radius;
+
+
+		p {
+			font-size: 4.5rem;
+			font-family: $font_3;
+			font-weight: 500;
+			color: $blue;
+			margin-bottom: 1rem;
+		}
+	}
+}

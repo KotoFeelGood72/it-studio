@@ -1,0 +1,187 @@
+.single-service {
+
+	// position: relative;
+	&:before {
+		position: absolute;
+		top: -8rem;
+		right: -45rem;
+		width: 100rem;
+		height: 93.5rem;
+		background: rgba(42, 0, 124, 0.1);
+		backdrop-filter: blur(2.5rem);
+		border-radius: 5rem;
+		transform: rotate(30deg);
+		content: '';
+		@include z-index(el);
+
+		@include bp($point_5) {
+			width: 100%;
+			height: 100vh;
+			top: 0%;
+			right: -60%;
+			opacity: .6;
+		}
+	}
+}
+.section_in {
+}
+.block-img {
+	@include flex-space;
+	align-items: flex-start;
+
+	@include bp($point_2) {
+		flex-direction: column;
+	}
+}
+.block_img--content {
+	margin-right: 4rem;
+	@include bp($point_2) {
+		order: 2;
+		margin: 0;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 2rem;
+	}
+	p  {
+		font-size: 2rem;
+		font-family: $font_2;
+		margin-bottom: 5rem;
+	}
+}
+.btn {
+}
+.trigger {
+}
+.orange-btn {
+}
+.block_img--picture {
+	max-width: 75.7rem;
+	width: 100%;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+		max-width: 100%;
+	}
+
+	@include bp($point_5) {
+		margin-bottom: 2rem;
+	}
+	img {
+		border-radius: $gl_radius;
+	}
+}
+.block_single--txt {
+}
+.txt-block {
+}
+.flex-1 {
+}
+.txt_head {
+}
+.txt_boby {
+}
+.block_single--service {
+}
+.mini-service {
+}
+.p8 {
+}
+.mini-service_main {
+}
+.mini_service--list {
+}
+.grid-4 {
+}
+.mini-service_item {
+}
+.block_single--price {
+}
+.block_single--head {
+
+	.btn {
+		@include bp($point_5) {
+			display: none;
+		}
+	}
+}
+.col-5 {
+}
+.icon {
+}
+.icon-yes {
+}
+.icon-no {
+}
+.block_single--work {
+}
+.home-work {
+}
+.section_head {
+}
+.section_title {
+}
+.section_nav {
+}
+.work_nav {
+}
+.section_nav_btn {
+}
+.work_btn_prev {
+}
+.icon-arrow-right {
+}
+.work_btn_next {
+}
+.work-slider {
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.work_slide {
+}
+.work_item {
+}
+.work_slide_img {
+}
+.work_slide_content {
+}
+.fz20 {
+}
+.break-text {
+}
+.light-btn {
+}
+.block_singleService--slider {
+}
+.services_nav {
+}
+.services_btn_prev {
+}
+.services_btn_next {
+}
+.services-slider {
+}
+.service_card--slide {
+}
+.serviceCard {
+}
+.serviceCard_icon {
+}
+.icon-service-0 {
+}
+.serviceCard_content {
+}
+.fz23 {
+}
+.serviceCard_link {
+}
+.serviceCard_link_icon {
+}
+.icon-service-1 {
+}
+.icon-service-2 {
+}
+.icon-service-3 {
+}

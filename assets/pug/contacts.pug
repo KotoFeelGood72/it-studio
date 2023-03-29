@@ -1,0 +1,15 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Contacts'}
+block content_block
+	+bread(['Главная'], 'Контакты')
+	section.contacts.pb8
+		.section_in 
+			.contacts_head
+				h1.mb6 Контакты
+				+contacts({
+					class: 'dark'
+				})
+			.contacts_map 
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae77601a0916d7831b844ed4bfff3aff6097f02d1888e502478643ff2bf9c95f2&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>

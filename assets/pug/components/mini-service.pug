@@ -1,0 +1,10 @@
+.mini-service.p8
+	.mini-service_main
+		h3 Наши преимущества
+		ul.mini_service--list.grid-4
+			-for(i = 0; i < 4; i++)
+				- let title = ['8+', '100+', '8+', '100+']
+				- let txt = ['Лет работаем на рынке', 'Клиентов на обслуживании', 'Лет работаем на рынке', 'Клиентов на обслуживании']
+					li.mini-service_item 
+						p=title[i]
+						span=txt[i]

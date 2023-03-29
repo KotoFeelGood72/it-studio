@@ -1,0 +1,70 @@
+.app_main {
+	position: relative;
+	background: url('../../i/home/action.jpg') center/cover no-repeat;
+	padding: 6rem 11.8rem 8rem 11.7rem;
+	color: $white;
+	border-radius: $gl_radius;
+	overflow: hidden;
+	@include bp($point_2) {
+		padding: 6rem 4rem;
+	}
+	@include bp($point_5) {
+		padding: 6rem 0;
+	}
+	.form_notice {
+		a {
+			color: $white;
+			border-color: $white;
+		}
+	}
+	.fz30{
+		color: $white;
+		margin-bottom: 1.5rem;
+	}
+}
+.app_head {
+	margin-bottom: 5rem;
+}
+
+
+.app {
+	@include bp($point_5) {
+		background-color: $blue;
+	}
+}
+.app_form_head {
+	width: 100%;
+	grid-gap: 1.5rem;
+	margin-bottom: 2.5rem;
+	.btn {
+		input {
+			width: 100%;
+		}
+	}
+}
+
+.about {
+	.app {
+		@include bp($point_5) {
+			position: relative;
+		}
+
+		&:before {
+			@include bp($point_5) {
+				position: absolute;
+				top: 0;
+				left: -1rem;
+				width: calc(100% + 2rem);
+				height: 100%;
+				background-color: $blue;
+				content: '';
+
+			}
+		}
+		.section_in {
+			@include bp($point_2) {
+				padding: 0;
+			}
+		}
+	}
+}

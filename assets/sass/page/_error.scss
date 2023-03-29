@@ -1,0 +1,27 @@
+.error_page--main {
+	padding: 20rem 0;
+	text-align: center;
+
+	@include bp($point_5) {
+		padding: 10rem 0;
+	}
+
+	h1 {
+		font-size: 15rem;
+		font-family: $font_3;
+		position: relative;
+		display: inline-flex;
+		color: $orange;
+		margin-bottom: 3rem;
+		@include bp($point_2) {
+			margin-bottom: 8rem;
+		}
+		&:before {
+			content: '404';
+			position: absolute;
+			top: 0;
+			right: -1rem;
+			color: #FF590033;
+		}
+	}
+}

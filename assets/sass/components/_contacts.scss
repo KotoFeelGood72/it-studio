@@ -1,0 +1,72 @@
+.contacts_body {
+	@include flex-space;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&.white {
+		a {
+			color: $white;
+		}
+	}
+
+	&.dark {
+		a {
+			color: $dark;
+		}
+	}
+}
+.contacts_info_list {
+	flex: 1;
+	max-width: 105rem;
+	margin-right: 5rem;
+	@include bp($point_2) {
+		margin-right: 0;
+		grid-gap: 2rem;
+		grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+		max-width: 100%;
+		margin-bottom: 2rem;
+	}
+	@include bp($point_5) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr))
+	}
+	li {
+		@include flex-start;
+		flex-direction: column;
+		align-items: flex-start;
+		&:first-child {
+			a {
+				color: $light-orange;
+			}
+		}
+
+		span {
+			display: block;
+			margin-bottom: 2rem;
+			font-size: 1.6rem;
+		}
+
+		.fz20 {
+			font-family: $font_2;
+			font-weight: 400;
+		}
+	}
+}
+.contacts_social_w {
+	span {
+		font-size: 1.6rem;
+		display: block;
+		margin-bottom: 2rem;
+	}
+}
+
+.contacts_map {
+	width: 100%;
+	height: 53.3rem;
+	border-radius: $gl_radius;
+	overflow: hidden;
+	@include bp($point_2) {
+		max-height: 35rem;
+	}
+}
