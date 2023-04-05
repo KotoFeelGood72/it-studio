@@ -23,6 +23,9 @@
 			}
 			.serviceCard_icon {
 				background-color: rgba(255, 255, 255, 0.2);
+				object {
+					filter: invert(100%) sepia(0%) saturate(2554%) hue-rotate(126deg) brightness(109%) contrast(110%);
+				}
 			}
 		}
 	}
@@ -39,6 +42,11 @@
 	height: 5.5rem;
 	border-radius: 0.5rem;
 	margin-bottom: 2rem;
+	color: $white;
+
+	object {
+		filter: invert(15%) sepia(44%) saturate(4464%) hue-rotate(253deg) brightness(78%) contrast(133%);
+	}
 }
 
 .serviceCard_link {

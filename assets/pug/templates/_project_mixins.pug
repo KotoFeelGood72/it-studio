@@ -35,7 +35,8 @@ mixin serviceCard(data)
 	.serviceCard 
 		a(href="#")
 			.serviceCard_icon 
-				+icon(data.icon)
+				//- +icon(data.icon)
+				object(type="image/svg+xml" data=`${data.icon}.svg`)
 			.serviceCard_content 
 				h3.fz23=data.title 
 				p.break-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
