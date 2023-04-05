@@ -83,11 +83,6 @@
 		}
 	}
 
-	.txt-logo {
-		// @include bp($point_5) {
-		// 	display: none;
-		// }
-	}
 }
 .header_nav {
 	@include bp($point_2) {
@@ -102,7 +97,7 @@
 			display: block;
 			padding: 3rem 0;
 			transition: all .3s ease;
-			&:hover, .current_page_item {
+			&:hover, .current_page_item, &.current-menu-item {
 				color: $orange;
 			}
 		}
