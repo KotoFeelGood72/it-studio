@@ -33,14 +33,14 @@
 				-for(i = 0; i < 5; i++)
 					- let menu = ['Главная', 'Услуги', 'Портфолио', 'О компании', 'Контакты']
 						if i === 1
-							li.nav_parent--item.remove 
+							li 
 								a(href="#")=menu[i]
 								ul.sub-list 
 									each item in ['IT-аутсорсинг', 'IT-услуги', 'IT-безопасность', 'Серверы']
 										li 
 											a(href="#")=item 
 						else 
-							li.remove
+							li
 								a(href="#")=menu[i]
 		.burger_info 
 			a(href="#" class="burger_phone" ) +7 000 000 00 00
