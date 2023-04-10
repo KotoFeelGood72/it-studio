@@ -184,7 +184,7 @@
 	ul {
 		&>li {
 			&.current-page-item, &:hover{
-				a {
+				&>a {
 					color: $light-orange;
 				}
 			}
